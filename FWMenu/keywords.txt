@@ -1,0 +1,13 @@
+FWMenu	KEYWORD1
+aButtonPressed	KEYWORD2
+action	KEYWORD2
+addToMenu	KEYWORD2
+button1	KEYWORD2
+button3	KEYWORD2
+button7	KEYWORD2
+buttonPressed	KEYWORD2
+fwSetup	KEYWORD2
+getMenuValueForOption	KEYWORD2
+setButtonz	KEYWORD2
+setupMenu	KEYWORD2
+useMenu	KEYWORD2
