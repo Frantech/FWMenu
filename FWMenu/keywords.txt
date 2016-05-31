@@ -3,7 +3,11 @@ aButtonPressed	KEYWORD2
 action	KEYWORD2
 addToMenu	KEYWORD2
 button1	KEYWORD2
+button2	KEYWORD2
 button3	KEYWORD2
+button4	KEYWORD2
+button5	KEYWORD2
+button6	KEYWORD2
 button7	KEYWORD2
 buttonPressed	KEYWORD2
 fwSetup	KEYWORD2
