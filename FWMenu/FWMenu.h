@@ -1,11 +1,3 @@
-//
-//    FILE: FWMenu.h
-//  AUTHOR: Frantech
-// VERSION: 0.1.00
-// PURPOSE: Interactive menu for TM1638 7 segment display
-//     URL: https://github.com/Frantech/FWMenu
-//REQUIRES: TM1638 library
-//
 /*
     FWMenu – Interactive Menu Interface for a TM1638 LED Module.
                   Copyright © 2015 Frank Williams
@@ -28,14 +20,8 @@ The author can be contacted at frank.w2@paradise.net.nz or by writing to:
     89 Miro St
     Trentham
     Upper Hutt
-    New Zealand 5018   
-
-            **** IMPORTANT Prerequisite Install ****	
-This code builds on the work done by Ricardo Batista and requires the 
-    preinstall of his TM1638 software which is available from 
-    https://code.google.com/p/tm1638-library/     
-
-	*/
+    New Zealand 5018
+*/
 
 #include "Arduino.h"
 #include <TM1638.h>
