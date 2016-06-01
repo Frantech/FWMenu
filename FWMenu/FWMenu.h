@@ -36,7 +36,7 @@ The author can be contacted at frank.w2@paradise.net.nz or by writing to:
  For instructions see FWMenu.cpp
  */
 
-// Inclusion guard. 
+// Inclusion guard.. 
 #ifndef fwmenu_h
 #define fwmenu_h
 
