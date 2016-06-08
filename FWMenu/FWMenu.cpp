@@ -90,14 +90,14 @@ TM1638(dataPin, clockPin, strobePin, activateDisplay, intensity){
 void FWMenu::setupMenu(int pace){
 
   // Button number masks. 
-  button1 = B1;   
-  button2 = B2; 
-  button3 = B3; 
-  button4 = B4; 
-  button5 = B5; 
-  button6 = B6; 
-  button7 = B7; 
-  button8 = B8; 
+  button1 = Btn1;   
+  button2 = Btn2; 
+  button3 = Btn3; 
+  button4 = Btn4; 
+  button5 = Btn5; 
+  button6 = Btn6; 
+  button7 = Btn7; 
+  button8 = Btn8; 
 
   _pace = pace;   // Pace at which the menu changes - default 500 milliseconds.  
   n = 0;          // Number of menu primary items. (Set by number of calls to addMenuItem).

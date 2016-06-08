@@ -42,14 +42,14 @@ The author can be contacted at frank.w2@paradise.net.nz or by writing to:
 
 /* Define which button is B1 etc. If you want to use different buttons than what is given, 
  this is where to do it. (Swap the hex values) */
-#define B1 0x01
-#define B2 0x02
-#define B3 0x04
-#define B4 0x08
-#define B5 0x10
-#define B6 0x20
-#define B7 0x40
-#define B8 0x80
+#define Btn1 0x01
+#define Btn2 0x02
+#define Btn3 0x04
+#define Btn4 0x08
+#define Btn5 0x10
+#define Btn6 0x20
+#define Btn7 0x40
+#define Btn8 0x80
 
 #define maxMenuSize 16
 
