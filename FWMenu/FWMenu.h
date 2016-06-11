@@ -79,13 +79,13 @@ public:
 
   // Set up menu storage. Each call adds one option value pair to the menu. 
   // Call this from setup(). Once per menu item.
-  void addToMenu(char opt[],float val,char attr,float delta);
+  void addToMenu(const char opt[],float val,char attr,float delta);
 
   // This is the main process. It needs to be called from inside the loop() method.
   void useMenu();
 
   // Get a menu value.
-  float getMenuValueForOption(char opt[]);
+  float getMenuValueForOption(const char opt[]);
 
   // Reset all menu values to defaults.
   void resetMenu();

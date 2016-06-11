@@ -112,7 +112,7 @@ void FWMenu::setupMenu(int pace){
 
 
 // Set up menu storage.- 'Opt' is always 8 characters. 'val' has 1 decimal place always.  
-void FWMenu::addToMenu(char opt[],float val,char attr,float delta){
+void FWMenu::addToMenu(const char opt[],float val,char attr,float delta){
   for (int i=0;i<8;i++){
     selection[n].option[i]=opt[i];
   }
@@ -224,7 +224,7 @@ boolean FWMenu::aButtonPressed(byte btn){
 
 
 // Make a menu value available. 
-float FWMenu::getMenuValueForOption(char opt[]){
+float FWMenu::getMenuValueForOption(const char opt[]){
   // Loop through menu.
   for (int i=0;i<n;i++){
     boolean match; 
