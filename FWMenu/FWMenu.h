@@ -69,6 +69,14 @@ public:
     return buttonz;
   }        
 
+  // Accessor functions for a "switch" to indicate if the display should be shown or cleared.
+  void setShowDisplay(bool sd){
+    showDisplay = sd;
+  }
+  byte getShowDisplay(){
+    return showDisplay;
+  }        
+  
   // NB - no setp() method because p is set only by addToMenu().
   int getp(){
     return p;
@@ -107,7 +115,10 @@ private:
 
   // Variable used for sensing buttons.
   byte buttonz;
-
+  
+  // Variable used to allow code outside of FWMenu to see if the display should be on or cleared. True = on, false = cleared.
+    bool showDisplay = true;
+  
   // Variables for menu selections code.
   int _pace;   	      // Speed at which the display changes. 
   int n;              // Number of menu primary items. (Set by the number of calls to addMenuItem).

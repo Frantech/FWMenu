@@ -188,8 +188,11 @@ void FWMenu::useMenu(){
 
   // B5 - Clear display
   if (aButtonPressed(button5)){
-    clearDisplay();
-    mode='o';  // We always 'switch on' (display something on the LED's) again in 'Option Mode'.
+	showDisplay = !showDisplay;
+    if (!showDisplay){
+		clearDisplay();
+	}
+	mode='o';  // We always 'switch on' (display something on the LED's) again in 'Option Mode'.
     // A little trick here - when you switch back on using B2 or B3, press each of these buttons once to return to where you were.
   }
 
