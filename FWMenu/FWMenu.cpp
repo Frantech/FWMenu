@@ -125,6 +125,9 @@ void FWMenu::addToMenu(const char opt[],float val,char attr,float delta){
 
 
 void FWMenu::useMenu(){
+
+  unsigned long value;          // To provide (long)selection[p].value.
+
   // Populate the buttonz private member variable.
   setButtonz(getButtons());   
 
@@ -138,17 +141,21 @@ void FWMenu::useMenu(){
   // B2 - Up/--.
   if (aButtonPressed(button2)){
     if (mode=='o'){
-      if (p>0){    // Not at top?
-        p--;       // Move up 1 cell.
+      if (p>0){    	// Not at top?
+        p--;       	// Move up 1 cell.
       }          
       String s = selection[p].option; 
       setDisplayToString(s);
     }
     if (mode=='v') {
       if (selection[p].access=='w') {
-        selection[p].value-=selection[p].delta;
+		// Don't allow a decrement below zero
+		float testval = selection[p].value-selection[p].delta;
+		if (testval>=0)
+          selection[p].value-=selection[p].delta;                    
         // Display value.
-        setDisplayToDecNumber(selection[p].value*10,2,false);
+		value = (unsigned long)(selection[p].value*10);
+        setDisplayToDecNumber(value,2,false);
       }
     }
   }
@@ -156,8 +163,8 @@ void FWMenu::useMenu(){
   // B3 - Down/++.
   if (aButtonPressed(button3)){
     if (mode=='o'){
-      if (p<n-1){  // Not at bottom?
-        p++;       // Move down 1 cell.
+      if (p<n-1){  	// Not at bottom?
+        p++;       	// Move down 1 cell.
       }       
       String s = selection[p].option; 
       setDisplayToString(s);
@@ -166,7 +173,8 @@ void FWMenu::useMenu(){
       if (selection[p].access=='w') {
         selection[p].value+=selection[p].delta;
         // Display value.
-        setDisplayToDecNumber(selection[p].value*10,2,false);
+		value = (unsigned long)(selection[p].value*10);
+        setDisplayToDecNumber(value,2,false);            // provided cast value here
       }
     }
   }
@@ -176,7 +184,8 @@ void FWMenu::useMenu(){
     if (mode=='o'){
       mode='v';
       // Display value.
-      setDisplayToDecNumber(selection[p].value*10,2,false);
+	  value = (unsigned long)(selection[p].value*10);
+      setDisplayToDecNumber(value,2,false);
     } 
     else
       if (mode=='v') {
