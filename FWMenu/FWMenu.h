@@ -120,7 +120,7 @@ private:
     bool showDisplay = true;
   
   // Variables for menu selections code.
-  int _pace;   	      // Speed at which the display changes. 
+  int _pace;           // Speed at which the display changes. 
   int n;              // Number of menu primary items. (Set by the number of calls to addMenuItem).
   int p;              // Index to current menu item. (array subscript).
   char mode;          // Mode: 'o' = option, 'v' = value.
