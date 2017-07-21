@@ -128,9 +128,6 @@ void FWMenu::useMenu() {
 
   unsigned long value;          // To provide (long)selection[p].value.
 
-  // Populate the buttonz private member variable.
-  setButtonz(getButtons());
-
   // Menu functionality - Display and set values.
   //=============================================
   // B1 - Spare at present.
@@ -220,6 +217,10 @@ void FWMenu::useMenu() {
     the result will be false. */
 boolean FWMenu::aButtonPressed(byte btn) {
   byte temp = getButtonz();
+
+  // Populate the buttonz private member variable.
+  setButtonz(getButtons());
+
   temp &= 0xff - btn;    // Switch off the wanted bit and see if any more are still on.
   if (temp == 0) {
     // Only 1 button was pressed. Now test it's value.
